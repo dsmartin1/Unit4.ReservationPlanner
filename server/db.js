@@ -1,7 +1,5 @@
 const pg = require('pg')
-
 const client = new pg.Client(process.env.DATABASE_URL || `postgres://localhost/${process.env.DB_NAME}`)
-
 const uuid = require('uuid')
 
 // seeding tables

@@ -58,7 +58,7 @@ app.delete('/api/customers/:customer_id/reservations/:id',  async(req, res, next
 // POST routes
 app.post('/api/customers/:customer_id/reservations',  async(req, res, next)=> {
   try {
-    res.status(201).send(await createReservation({ customer_id: req.params.customer_id, restaurant_id: req.body.place_id, departure_date: req.body.departure_date}));
+    res.status(201).send(await createReservation({ customer_id: req.params.customer_id, restaurant_id: req.body.place_id, date: req.body.date}));
   }
   catch(error){
     next(error);
